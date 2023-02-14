@@ -41,7 +41,9 @@ export const todoReducer = (state = initialState, action) => {
         
       }
       case actionTypes.DELETE: {
-        const filteredTodos = state.filter((todo) => todo.id !== action.payload);
+        const filteredTodos = state.filter((todo) => {
+            return todo.id !== action.payload
+        });
         console.log(action.payload);
         return  filteredTodos
       }

@@ -11,7 +11,7 @@ const TodoList = () => {
             <StyledList>
             {todos.map((item,index) =>{
                 return (
-                    <TodoItem key={index} item={item} index={index}/>
+                    <TodoItem key={item.id} item={item} />
                 )
             })}
             </StyledList>

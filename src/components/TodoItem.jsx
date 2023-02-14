@@ -13,6 +13,7 @@ const TodoItem = ({item}) => {
 
     const deleteTodoHandler = (id) =>{
         dispatch({type: actionTypes.DELETE, payload: id})
+        console.log(id);
     }
     
     const completeTodoHandler = (id) =>{

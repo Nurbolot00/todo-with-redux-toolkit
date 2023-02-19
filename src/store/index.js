@@ -1,11 +1,10 @@
-import{ combineReducers, createStore } from 'redux'
-import { authReducer } from './auth/AuthReducer'
-import { todoReducer } from './todo-reducer/TodoReducer'
-
+import { combineReducers, createStore } from "redux";
+import { authSlice } from "./auth/AuthSlice";
+import { todoSlice } from "./todo-reducer/TodoSlice";
 
 const rootReducer = combineReducers({
-    todo: todoReducer,
-    auth: authReducer
-})
+  todo: todoSlice.reducer,
+  auth: authSlice.reducer,
+});
 
-export const store = createStore(rootReducer)
+export const store = createStore(rootReducer);
